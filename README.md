@@ -1,2 +1,2 @@
-# cloudcode-cool-react-image-upload
-Cool react image upload control to use in node web apps like React to upload profile images.
+# cool-react-image-upload
+The starter code for this node module was cloned from git@github.com:chimdie/react-image-upload.git

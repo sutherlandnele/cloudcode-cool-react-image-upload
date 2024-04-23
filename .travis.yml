@@ -1,0 +1,29 @@
+language: node_js
+node_js:
+  - 18
+
+# Specify branches to build
+branches:
+  only:
+    - main  # Adjust if you use a different branch for production
+
+# Cache node modules to speed up builds
+cache:
+  directories:
+    - node_modules
+
+# Install dependencies
+install:
+  - npm install
+
+# Run jest tests
+script:
+  - npm test
+
+# Optional: Define what to do after successful tests
+after_success:
+  - echo "Tests passed. Ready to deploy or merge."
+
+# Optional: Actions to take if the build fails
+after_failure:
+  - echo "Tests failed. Fix issues before pushing."
