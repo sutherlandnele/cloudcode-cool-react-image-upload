@@ -1,15 +1,16 @@
 {
   "name": "cool-react-image-upload",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "cool react library for uploading images. this is cloned from react-image-upload npm module with some additional features",
   "author": "Sutherland Nele <sutherland.nele@cloudcode.com.pg> (https://www.cloudcode.com.pg)",
   "repository": "sutherlandnele/cloudcode-node-modules",
   "source": "src/index.tsx",
-  "private": true,
+  "private": false,
   "type": "module",
   "keywords": [
     "cloudcode",
     "nextjs",
+    "cool",
     "react",
     "image",
     "upload"
@@ -27,23 +28,6 @@
   },
   "peerDependencies": {
     "react": "^18.2.0"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.24.4",
-    "@babel/preset-env": "^7.24.4",
-    "@babel/preset-react": "^7.24.1",
-    "@babel/preset-typescript": "^7.24.1",
-    "@types/node": "^18.14.2",
-    "@types/react": "^18.0.27",
-    "@types/scheduler": "^0.23.0",
-    "@vitejs/plugin-react-swc": "^3.0.0",
-    "babel-jest": "^29.7.0",
-    "identity-obj-proxy": "^3.0.0",
-    "jest": "^29.7.0",
-    "jest-environment-jsdom": "^29.7.0",
-    "typescript": "^4.9.3",
-    "vite": "^4.1.0",
-    "vite-plugin-dts": "^2.1.0"
   },
   "files": [
     "dist"

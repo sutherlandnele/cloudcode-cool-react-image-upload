@@ -11,13 +11,14 @@ const CoolImageUploader = ({
   style,
   acceptedFileTypes,
   maxFileSize = 1000000,  // Default value of 1MB set here
-  btnWrapperStyle // destructure new prop
+  btnWrapperStyle, // destructure new prop
+  imageData, // need this prop to maintain state when the component is re-rendered
 
 }: FileUploaderProps): JSX.Element => {
-  const [currentImg, setCurrentImg] = useState<Partial<FileObjectType>>({
-    file: {} as File,
-    dataUrl: ''
-  })
+
+  const [currentImg, setCurrentImg] = useState<Partial<FileObjectType>>(imageData ? { dataUrl: imageData } : { file: {} as File, dataUrl: '' });
+
+
   const handleFilePicker = (e: ChangeEvent<HTMLInputElement>): void => {
     const { files } = e.target
 
@@ -38,15 +39,18 @@ const CoolImageUploader = ({
       const imageObject = {
         file: files[0],
         dataUrl: URL.createObjectURL(files[0])
-      }
+      };
+
       setCurrentImg((oldImage) => {
         return { ...oldImage, ...imageObject }
-      })
+      });
+
       if (onFileAdded) {
         onFileAdded(imageObject)
-      }
+      };
+
     }
-  }
+  };
 
   const handleDeleteImage = (): void => {
     if (onFileRemoved != null && Object.keys(currentImg).length > 0) {
@@ -54,8 +58,8 @@ const CoolImageUploader = ({
       const _currentImg: FileObjectType = partialCurrentImg as FileObjectType
       onFileRemoved(_currentImg)
     }
-    setCurrentImg({})
-  }
+    setCurrentImg({});
+  };
 
 
   const mapMimeTypesToFileExtensions = (mimeTypes: string): string => {
@@ -98,7 +102,7 @@ const CoolImageUploader = ({
     const i = Math.floor(Math.log(bytes) / Math.log(k));
   
     return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i];
-  }
+  };
   
 
   
@@ -142,5 +146,5 @@ const CoolImageUploader = ({
   )
 }
 
-export default CoolImageUploader
-export type { FileUploaderProps, FileObjectType }
+export default CoolImageUploader;
+export type { FileUploaderProps, FileObjectType };

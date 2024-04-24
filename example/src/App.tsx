@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import CoolImageUploader, { FileObjectType } from 'cool-react-image-upload';
 import 'cool-react-image-upload/dist/index.css';
 import './index.css';
@@ -6,10 +7,15 @@ import { BsCamera } from 'react-icons/bs';
 import { RiDeleteRow } from 'react-icons/ri';
 
 const App = () => {
+
+  const [imageData, setImageData] = useState<string>('');
+
   function getImageFileObject(imageFile: FileObjectType) {
+    setImageData(imageFile.dataUrl);
     console.log({ onAdd: imageFile });
   }
   function runAfterImageDelete(file: FileObjectType) {
+    setImageData('');
     console.log({ onDele: file });
   }
   return (
@@ -20,23 +26,24 @@ const App = () => {
           onFileAdded={(img: FileObjectType) => getImageFileObject(img)}
           onFileRemoved={(img: FileObjectType) => runAfterImageDelete(img)}
           acceptedFileTypes="image/jpeg,image/png"
-          maxFileSize={5000000}
+          maxFileSize={1000000}
           style={{
-            height: '300px',
-            width: '300px',
+            height: '150px',
+            width: '150px',
             color: '#ffb200',
             backgroundColor: 'white',
-            border: '6px solid #cccccc',
+            border: '3px solid #cccccc',
             borderRadius: '50%'
           }}        
           btnWrapperStyle={{
-            top: '70px',
-            right: '40px'
-          }}          
+            top: '15px',
+            right: '30px'
+          }}
+          imageData={imageData}          
           
           />
       </div>
-      {/* example 2 */}
+      {/* example 2 
       <div className='_m4'>
         <CoolImageUploader
           onFileAdded={(img: FileObjectType) => getImageFileObject(img)}
@@ -50,7 +57,7 @@ const App = () => {
           }}
         />
       </div>
-      {/* example 3 */}
+      {/* example 3 
       <div className='_m4'>
         <CoolImageUploader
           onFileAdded={(img: FileObjectType) => getImageFileObject(img)}
@@ -58,7 +65,7 @@ const App = () => {
           uploadIcon={<BsCamera fontSize='30px' />}
         />
       </div>
-      {/* example 3 */}
+      {/* example 3 
       <div className='_m4'>
         <CoolImageUploader
           onFileAdded={(img: FileObjectType) => getImageFileObject(img)} // Runs to confirm that the image actually exists
@@ -75,6 +82,7 @@ const App = () => {
           }}
         />
       </div>
+      */}
     </div>
   )
 }
