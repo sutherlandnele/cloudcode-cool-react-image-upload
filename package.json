@@ -6,6 +6,7 @@
   "repository": "sutherlandnele/cloudcode-cool-react-image-upload",
   "source": "src/index.tsx",
   "private": false,
+  "license": "MIT",
   "type": "module",
   "keywords": [
     "cloudcode",

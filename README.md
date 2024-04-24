@@ -48,6 +48,10 @@ function App() {
     setImageData('');
   };
 
+  const handleOnError = (errMsg) => {
+    console.error("An error occurred: " + errMsg);
+  }
+
   return (
     <div>
       <CoolImageUploader
@@ -66,6 +70,7 @@ function App() {
           top: '10px',
           right: '10px'
         }}
+        onError={handleOnError}
       />
     </div>
   );
@@ -83,6 +88,8 @@ export default App;
 - **maxFileSize (number)**: Maximum file size allowed in bytes. (OPTIONAL)
 - **style (CSSProperties)**: Styles for the uploader container. (OPTIONAL)
 - **btnWrapperStyle (CSSProperties)**: Styles for the delete button container.(OPTIONAL)
+- **onError (Function)**: Callback fired when validation fails.(OPTIONAL)
+
 
 ## Contributing
 
