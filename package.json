@@ -3,7 +3,7 @@
   "version": "1.0.2",
   "description": "cool react library for uploading images. this is cloned from react-image-upload npm module with some additional features",
   "author": "Sutherland Nele <sutherland.nele@cloudcode.com.pg> (https://www.cloudcode.com.pg)",
-  "repository": "sutherlandnele/cloudcode-node-modules",
+  "repository": "sutherlandnele/cloudcode-cool-react-image-upload",
   "source": "src/index.tsx",
   "private": false,
   "type": "module",
