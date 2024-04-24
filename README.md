@@ -18,14 +18,17 @@ The starter code for this node module was cloned from git@github.com:chimdie/rea
 You can install the package using npm or yarn:
 
 npm:
+
 ```bash
 npm install cool-react-image-upload
 ```
 
 yarn:
+
 ```bash
 yarn add cool-react-image-upload
 ```
+
 ## Usage
 
 Below is a simple example to demonstrate how to integrate the Cool React Image Upload into your project:

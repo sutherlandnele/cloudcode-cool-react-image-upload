@@ -13,6 +13,7 @@ const CoolImageUploader = ({
   maxFileSize = 1000000,  // Default value of 1MB set here
   btnWrapperStyle, // destructure new prop
   imageData, // need this prop to maintain state when the component is re-rendered
+  onError
 
 }: FileUploaderProps): JSX.Element => {
 
@@ -25,13 +26,23 @@ const CoolImageUploader = ({
     //if (files != null && files.length > 0) {
     if (files && files[0]) {
       if (acceptedFileTypes && !acceptedFileTypes.split(",").includes(files[0].type)) {
-        alert(`File type not accepted. Acceptable types: ${acceptedFileTypes}`);
+        const msg = `File type not accepted. Acceptable types: ${acceptedFileTypes}`;
+        if (onError) {
+          onError(msg);
+        } else {
+          alert(msg);
+        }
         return;
       }
 
       if (files[0].size > maxFileSize) {
         const maxFileSizeFormatted = formatBytes(maxFileSize);
-        alert(`File is too large. Maximum size allowed is ${maxFileSizeFormatted}.`);
+        const msg = `File is too large. Maximum size allowed is ${maxFileSizeFormatted}.`;
+        if (onError) {
+          onError(msg);
+        } else {
+          alert(msg);
+        }
         return;
       }
 
