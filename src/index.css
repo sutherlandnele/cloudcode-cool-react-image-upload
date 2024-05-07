@@ -29,10 +29,24 @@
   left: 50%;
   z-index: 1;
   transform: translate(-50%, -50%);
+
+  transition: opacity 0.5s ease, visibility 0.5s;
+  opacity: 0;
 }
-.uploader__file_input_label:hover {
+.uploader__file_input_label:hover,
+.uploader__file_input_label.fake-hover {
+  opacity: 1;
   cursor: pointer;
+  transform: translate(-50%, -50%) scale(1.05);
+
 }
+
+/* Additional hover effect for SVG inside label */
+.uploader__file_input_label:hover svg,
+.uploader__file_input_label.fake-hover svg {
+  fill: #000; /* Change color on hover */
+}
+
 input.uploader__file_input {
   position: absolute;
   height: 0.1px;

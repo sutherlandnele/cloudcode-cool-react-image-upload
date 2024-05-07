@@ -40,11 +40,11 @@ import CoolImageUploader from 'cool-react-image-upload';
 function App() {
   const [imageData, setImageData] = useState('');
 
-  const handleOnFileAdded = (file) => {
-    setImageData(file.dataUrl);
+  const handleOnFileAdded = (imgObj) => {
+    setImageData(imgObj.dataUrl);
   };
 
-  const handleOnFileRemoved = () => {
+  const handleOnFileRemoved = (imgObj) => {
     setImageData('');
   };
 
@@ -55,23 +55,25 @@ function App() {
   return (
     <div>
       <CoolImageUploader
-        onFileAdded={handleOnFileAdded}
-        onFileRemoved={handleOnFileRemoved}
-        imageData={imageData}
-        onImageChange={setImageData}
-        acceptedFileTypes="image/jpeg,image/png"
-        maxFileSize={1000000}  // 1MB max file size
-        style={{
-          height: '150px',
-          width: '150px',
-          borderRadius: '10px'
-        }}
-        btnWrapperStyle={{
-          top: '10px',
-          right: '10px'
-        }}
-        onError={handleOnError}
-      />
+                onFileAdded={(imgObj) => handleOnFileAdded(imgObj)}
+                onFileRemoved={(imgObj) => handleOnFileRemoved(imgObj)}
+                acceptedFileTypes="image/jpeg,image/png"
+                maxFileSize={1000000}
+                style={{
+                    height: '150px',
+                    width: '150px',
+                    color: '#ffb200',
+                    backgroundColor: 'white',
+                    border: '3px solid #cccccc',
+                    borderRadius: '50%'
+                }}        
+                btnWrapperStyle={{
+                    top: '15px',
+                    right: '30px'
+                }}
+                imageData={imageData}  
+                onError={(errMsg) => handleOnError(errMsg)}       
+      /> 
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import React, { useState, ChangeEvent } from 'react'
+import React, { useState, ChangeEvent, useEffect } from 'react'
 import { DeleteIcon, UploadIcon } from './components/icons'
 import { FileUploaderProps, FileObjectType } from './interface'
 import './index.css'
@@ -18,6 +18,7 @@ const CoolImageUploader = ({
 }: FileUploaderProps): JSX.Element => {
 
   const [currentImg, setCurrentImg] = useState<Partial<FileObjectType>>(imageData ? { dataUrl: imageData } : { file: {} as File, dataUrl: '' });
+  const [isHovering, setIsHovering] = useState(false);
 
 
   const handleFilePicker = (e: ChangeEvent<HTMLInputElement>): void => {
@@ -129,7 +130,14 @@ const CoolImageUploader = ({
 
         {/* upload Input Box */}
         {currentImg && currentImg.dataUrl !== null && (
-          <label id='file_uploader' className='uploader__file_input_label'>
+          <label id='file_uploader' 
+          className={`uploader__file_input_label ${isHovering ? 'fake-hover' : ''}`}
+          onMouseEnter={() => setIsHovering(true)}
+          onMouseLeave={() => setIsHovering(false)}
+          onTouchStart={() => setIsHovering(true)}
+          onTouchEnd={() => setIsHovering(false)}
+          
+          >
             <UploadIcon element={uploadIcon} />
             {/* input element */}
             <input
