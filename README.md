@@ -112,3 +112,9 @@ Please make sure to update tests as appropriate.
 ## License
 
 This project is licensed under the MIT License - see [MIT License](https://opensource.org/licenses/MIT) for details.
+
+<div align="center">
+
+### 𝚂𝚑𝚘𝚠 𝚜𝚘𝚖𝚎 ❤️ 𝚋𝚢 𝚜𝚝𝚊𝚛𝚛𝚒𝚗𝚐 this repository!
+
+</div>
