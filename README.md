@@ -1,4 +1,14 @@
-# Cool React Image Upload
+```diff
+╭━━━╮╱╱╱╱╱╭╮╱╭━━━╮╱╱╱╱╱╱╱╱╭╮╱╭━━╮╱╱╱╱╱╱╱╱╱╱╱╱╭╮╱╭╮╱╱╭╮╱╱╱╱╱╱╱╱╭╮
+┃╭━╮┃╱╱╱╱╱┃┃╱┃╭━╮┃╱╱╱╱╱╱╱╭╯╰╮╰┫┣╯╱╱╱╱╱╱╱╱╱╱╱╱┃┃╱┃┃╱╱┃┃╱╱╱╱╱╱╱╱┃┃
+┃┃╱╰╋━━┳━━┫┃╱┃╰━╯┣━━┳━━┳━┻╮╭╯╱┃┃╭╮╭┳━━┳━━┳━━╮┃┃╱┃┣━━┫┃╭━━┳━━┳━╯┃
+┃┃╱╭┫╭╮┃╭╮┃┃╱┃╭╮╭┫┃━┫╭╮┃╭━┫┃╱╱┃┃┃╰╯┃╭╮┃╭╮┃┃━┫┃┃╱┃┃╭╮┃┃┃╭╮┃╭╮┃╭╮┃
+┃╰━╯┃╰╯┃╰╯┃╰╮┃┃┃╰┫┃━┫╭╮┃╰━┫╰╮╭┫┣┫┃┃┃╭╮┃╰╯┃┃━┫┃╰━╯┃╰╯┃╰┫╰╯┃╭╮┃╰╯┃
+╰━━━┻━━┻━━┻━╯╰╯╰━┻━━┻╯╰┻━━┻━╯╰━━┻┻┻┻╯╰┻━╮┣━━╯╰━━━┫╭━┻━┻━━┻╯╰┻━━╯
+╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╭━╯┃╱╱╱╱╱╱╱┃┃
+╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╰━━╯╱╱╱╱╱╱╱╰╯
+```
+---
 
 Cool React Image Upload is a comprehensive React component designed for handling image uploads with features like file type filtering and file size validation. It provides an easy integration for any React application and offers extensive customization options.
 
