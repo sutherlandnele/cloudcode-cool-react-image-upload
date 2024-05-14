@@ -14,7 +14,7 @@ Cool React Image Upload is a comprehensive React component designed for handling
 
 ## Original Source
 
-The starter code for this node module was cloned from git@github.com:chimdie/react-image-upload.git.
+This is a fork of git@github.com:chimdie/react-image-upload.git.
 
 ## Added Features
 
