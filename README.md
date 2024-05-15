@@ -8,6 +8,9 @@
 ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╭━╯┃╱╱╱╱╱╱╱┃┃
 ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╰━━╯╱╱╱╱╱╱╱╰╯
 ```
+[![npm version](https://img.shields.io/npm/v/cool-react-image-upload.svg?style=flat)](https://www.npmjs.com/package/cool-react-image-upload)
+[![npm downloads](https://img.shields.io/npm/dm/cool-react-image-upload.svg?style=flat)](https://www.npmjs.com/package/cool-react-image-upload)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/sutherlandnele/cloudcode-cool-react-image-upload#contributing)
 ---
 
 Cool React Image Upload is a comprehensive React component designed for handling image uploads with features like file type filtering and file size validation. It provides an easy integration for any React application and offers extensive customization options.
